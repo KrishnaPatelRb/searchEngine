@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    #first,#second{
+        display: none;
+    }
+    /* body{
+        /* background-image:url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-052.jpg); */
+        /* background-color: black;
+        background-repeat:  repeat; 
+        
+   } */
+   #input{
+       width: 70%;
+       height: 50px;
+       border-radius: 15px;
+       margin-bottom: 10px;
+       margin-top: 10px;
+       font-size: 25px;
+   }
+   #button{
+       font-size: 30px;
+       background-color: orangered;
+   }
+  ::-webkit-input-placeholder{
+      font-size: 25px;
+      opacity: 0.5;
+      
+  }
+  img{
+      margin-top: 100px;
+  }
+  .social-media{
+      display: grid;
+      grid-template-columns: 60px 60px 60px ;
+      justify-content: center;
+      margin-top: 50px;
+  }
+  
+</style>
+    </head>
+    <!-- <video id="videos"  width="300"  controls loop autoplay  class="d-block rounded-bottom-2 width-fit" style="max-height:640px;">
+<source src="https://user-images.githubusercontent.com/93961739/148724703-69ff9643-3999-4572-9897-a0145391b0e3.mp4" data-canonical-src="https://user-images.githubusercontent.com/93961739/148724703-69ff9643-3999-4572-9897-a0145391b0e3.mp4" >
+    </video> -->
+    
+    
+    <center> <img height="300px" width="300px" src="https://png2.cleanpng.com/sh/5f89da315f4a419af72727ad08a33a6f/L0KzQYm3VcA3N5Rsj5H0aYP2gLBuTfdtd5NqRel4cnznPb32hB8ubZJ3jNo2NXHodbbthfE2QZc3TKk3NEGzRYK5V8YyPWM6TqIDNEK5Q4eBVL5xdpg=/kisspng-globe-world-logo-earth-5aeeefea59f247.4105127615256084263684.png" alt=""> </center>
+   <center>
+    <form >
+        <input id="input" placeholder="  Search anything here" required type="text">
+        <br>
+        <button id="button" onclick="searchfunction()">Search</button>
+        </form>
+        <div class="social-media">
+            <div class="icon">
+                <a href="https://github.com/KrishnaPatelRb" target="_blank"><i class="fa fa-github" style="color: black; font-size: 20px;" ></i></a>
+            </div>
+            <div class="icon">
+                <a href="https://www.instagram.com/krishna.patel.rb/?hl=en" target="_blank"><i class="fa fa-instagram" style="color: black; font-size: 20px;" ></i></a>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/public/Krishna-Patel-rebel" target="_blank"><i class="fa fa-facebook" style=" font-size: 20px;" ></i></a>
+            </div>
+        </div>
+   </center>
+        <div id="first">"https://www.ecosia.org/search?q=</div>
+        <div id="second">"</div>
+    </body>
+    <script>
+                 
+            
+              
+           
+
+        function searchfunction(){
+            const inputelementfirst=document.getElementById("first");
+           const content1=inputelementfirst.textContent;
+    
+           const inputelementsecond=document.getElementById("second");
+           const content2=inputelementsecond.textContent;
+
+           const inputelement=document.getElementById("input");
+           const content=inputelement.value;
+           
+           const final=content1+content+content2;
+           const pass="https://www.ecosia.org/search?q="+content;
+            newtabe(pass);
+            // "https://www.ecosia.org/search?q=fb"
+
+           
+        }
+        function newtabe(link){
+            window.open(link);
+        
+        }
+    </script>
+</html>
